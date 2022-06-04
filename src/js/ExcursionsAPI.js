@@ -46,7 +46,7 @@ class ExcursionsAPI {
                 }
             }).catch(error => alert(`${error}`))
             .finally(callback);
-    }
+    };
 
     getDataApi() {
         return fetch(`${this.excursions}`)
@@ -57,6 +57,21 @@ class ExcursionsAPI {
                 return response.json();
             })
             .catch(error => alert(`${error}`));
+    };
+
+    addClientOrderApi(data,callback) {
+        const options = {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: { 'Content-Type': 'application/json' }
+        };
+        fetch(`${this.orders}` ,options)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Can not send data to server`);
+                };
+            }).catch(error => alert(`${error}`))
+            .finally(callback)
     };
 };
 

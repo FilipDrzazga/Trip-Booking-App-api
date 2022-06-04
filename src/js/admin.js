@@ -1,5 +1,5 @@
 import './../css/admin.css';
-import { isFormValid , createLiElement } from './helpers';
+import { isFormValid , excursionLiElement } from './helpers';
 
 import ExcursionsAPI from './ExcursionsAPI';
 const api = new ExcursionsAPI();
@@ -103,7 +103,7 @@ function displayExcursion() {
     api.getDataApi().then(data => {
         data.forEach(el => {
             const { excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice, id } = el;
-            createLiElement(excursionPanel,id, excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice);
+            excursionLiElement(excursionPanel,id, excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice);
         });
     });
 };
