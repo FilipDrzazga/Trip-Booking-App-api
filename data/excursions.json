@@ -1,45 +1,4 @@
 {
-  "excursions": [
-    {
-      "excursionName": "Kruszwica",
-      "excursionDescription": "Mysia wieza",
-      "excursionAdultPrice": "20",
-      "excursionChildPrice": "10",
-      "id": 2
-    }
-  ],
-  "orders": [
-    {
-      "name": "Filip",
-      "email": "filip.drzazga@gmail.com",
-      "totalPrice": "430PLN",
-      "excursions": [
-        {
-          "excursionName": "Wloclawek",
-          "excursionInfo": "dorośli: 1 x 50PLN, dzieci: 12 x 10PLN"
-        },
-        {
-          "excursionName": "Kruszwica",
-          "excursionInfo": "dorośli: 2 x 20PLN, dzieci: 22 x 10PLN"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "name": "Filip Drzazga",
-      "email": "fffas",
-      "totalPrice": "120PLN",
-      "excursions": [
-        {
-          "excursionName": "Kruszwica",
-          "excursionInfo": "dorośli: 2 x 20PLN, dzieci: 2 x 10PLN"
-        },
-        {
-          "excursionName": "Wloclawek",
-          "excursionInfo": "dorośli: 1 x 50PLN, dzieci: 1 x 10PLN"
-        }
-      ],
-      "id": 2
-    }
-  ]
+  "excursions": [],
+  "orders": []
 }
