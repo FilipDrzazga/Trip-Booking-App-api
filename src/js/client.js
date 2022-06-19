@@ -1,33 +1,9 @@
 import './../css/client.css';
 import { isFormValid, getExcursionDetails, clientLiElement, clientLiOrder } from './helpers';
+import { clientInputs } from './inputValidation';
 
 import ExcursionsAPI from './ExcursionsAPI';
 const api = new ExcursionsAPI();
-
-const clientInputs = [
-  {
-    name: "adults",
-    isReq: true,
-    type: "number",
-    pattern: '^[1-9]',
-  },
-  {
-    name: "children",
-    isReq: true,
-    type: "number",
-    pattern: '^[0-9]',
-  },
-  {
-    name: "name",
-    isReq: true,
-    pattern: '\\D{3,}',
-  },
-  {
-    name: "email",
-    isReq: true,
-    pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$',
-  },
-];
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -39,7 +15,7 @@ function init() {
 };
 function getDataApi() {
     const excursion = document.querySelector('.excursions');
-    api.getDataApi().then(data => {
+    api.getApi().then(data => {
         data.forEach(el => {
             const { excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice, id } = el;
             clientLiElement(excursion,id, excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice);

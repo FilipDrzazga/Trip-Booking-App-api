@@ -7,23 +7,26 @@ export function isFormValid(form, checkInputs) {
             const value = form.elements[name].value;
             if (isReq) {
                 if (value === '') {
-                    return alert(`This field [${name}] can not be empty`);
+                    alert(`This field [${name}] can not be empty`);
+                    return isValid = false;
                 };
                 if (type === 'number') {
                     const reg = new RegExp(pattern);
                     if (!reg.test(+value)) {
-                        return alert(`Please make sure if the value is a number`)
+                        alert(`Please make sure if the value is a number`);
+                        return isValid = false;
                     }
                 };
                 if (pattern) {
                     const reg = new RegExp(pattern);
                     if (!reg.test(value)) {
-                        return alert(`Please check if field [${name}] contains correctly value base it of name`);
+                        alert(`Please check if field [${name}] contains correctly value base it of name`);
+                        return isValid = false;
                     };
                 };
             };
-            isValid = true;
-        };
+        }
+        isValid = true;
     });
     return isValid;
 };

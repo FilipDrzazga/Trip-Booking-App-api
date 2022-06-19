@@ -1,28 +1,10 @@
 import './../css/admin.css';
-import { isFormValid , excursionLiElement } from './helpers';
+import { isFormValid, excursionLiElement } from './helpers';
+import { adminInputs } from './inputValidation';
 
 import ExcursionsAPI from './ExcursionsAPI';
 const api = new ExcursionsAPI();
 
-const adminInputs = [{
-    name: 'name',
-    isReq: true,
-    pattern: '\\D{3,}',
-    type:'text'
-}, {
-    name: 'description',
-    isReq: true,
-    }, {
-    name: 'adult',
-    isReq: true,
-    pattern: `^(\\d{1,3})|((\\.|,)\\d{0,2}$)`,
-    type:'number'
-}, {
-    name: 'child',
-    isReq: true,
-    pattern: '^(\\d{1,3})|((\\.|,)\\d{0,2}$)',
-    type:'number'
-}]
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -49,7 +31,7 @@ function addExcursion() {
                     excursionAdultPrice: excursionAdultPrice.value,
                     excursionChildPrice: excursionChildPrice.value
                 };
-                api.addDataApi(data,displayExcursion);
+                api.addApi(data,displayExcursion);
             };
             form.reset();
         });
@@ -61,9 +43,10 @@ function deleteExcursion() {
     if (excursionPanel) {
         excursionPanel.addEventListener('click', (e) => {
             e.preventDefault();
-            if (e.target.value === 'usuń') {
+            console.dir(e.target);
+            if (e.target.tagName === 'INPUT') {
                 const id = e.target.closest('li').dataset.id;
-                api.removeDataApi(id, displayExcursion);
+                api.removeApi(id, displayExcursion);
             };
         });
     };
@@ -100,7 +83,7 @@ function displayExcursion() {
     const excursionPanel = document.querySelector('.panel__excursions');
     excursionPanel.innerHTML = '';
 
-    api.getDataApi().then(data => {
+    api.getApi().then(data => {
         data.forEach(el => {
             const { excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice, id } = el;
             excursionLiElement(excursionPanel,id, excursionName, excursionDescription, excursionAdultPrice, excursionChildPrice);

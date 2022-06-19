@@ -1,13 +1,6 @@
 {
   "excursions": [
     {
-      "excursionName": "Wloclawek",
-      "excursionDescription": "Tylko keczup Wloclawski",
-      "excursionAdultPrice": "50",
-      "excursionChildPrice": "10",
-      "id": 1
-    },
-    {
       "excursionName": "Kruszwica",
       "excursionDescription": "Mysia wieza",
       "excursionAdultPrice": "20",
@@ -31,6 +24,22 @@
         }
       ],
       "id": 1
+    },
+    {
+      "name": "Filip Drzazga",
+      "email": "fffas",
+      "totalPrice": "120PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 2 x 20PLN, dzieci: 2 x 10PLN"
+        },
+        {
+          "excursionName": "Wloclawek",
+          "excursionInfo": "dorośli: 1 x 50PLN, dzieci: 1 x 10PLN"
+        }
+      ],
+      "id": 2
     }
   ]
 }

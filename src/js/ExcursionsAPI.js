@@ -1,17 +1,16 @@
 class ExcursionsAPI {
 
     constructor() {
-        this.excursions = 'http://localhost:3000/excursions';
-        this.orders = 'http://localhost:3000/orders';
+        this.url = 'http://localhost:3000';
     };
 
-    addDataApi(data,callback) {
+    addApi(data,callback) {
         const options = {
             method: 'POST',
             body: JSON.stringify(data),
             headers: { 'Content-Type': 'application/json' }
         };
-        fetch(`${this.excursions}`, options)
+        fetch(`${this.url}/excursions`, options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Can not send data to server`);
@@ -20,11 +19,11 @@ class ExcursionsAPI {
             .finally(callback)
     };
 
-    removeDataApi(id,callback) {
+    removeApi(id,callback) {
         const options = {
             method: 'DELETE',
         };
-        fetch(`${this.excursions}/${id}`, options)
+        fetch(`${this.url}/excursions/${id}`, options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Can not delete file from server, try again later');
@@ -39,7 +38,7 @@ class ExcursionsAPI {
             body: JSON.stringify(data),
             headers: { 'Content-Type': 'application/json' }
         };
-        fetch(`${this.excursions}/${id}`, options)
+        fetch(`${this.url}/excursions/${id}`, options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Can not update content')
@@ -48,8 +47,8 @@ class ExcursionsAPI {
             .finally(callback);
     };
 
-    getDataApi() {
-        return fetch(`${this.excursions}`)
+    getApi() {
+        return fetch(`${this.url}/excursions`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Can not get data from server, try again later');
@@ -65,7 +64,7 @@ class ExcursionsAPI {
             body: JSON.stringify(data),
             headers: { 'Content-Type': 'application/json' }
         };
-        fetch(`${this.orders}` ,options)
+        fetch(`${this.url}/orders`, options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Can not send data to server`);
