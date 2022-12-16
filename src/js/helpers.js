@@ -51,18 +51,18 @@ export function excursionLiElement(insertToElement,id,excursionName,excursionDes
             <form class="excursions__form">
                 <div class="excursions__field">
                     <label class="excursions__field-name">
-                        Dorosły: <strong><span>${excursionAdultPrice}</span></strong>PLN
+                        Adult: <strong><span>${excursionAdultPrice}</span></strong>PLN
                     </label>
                 </div>
                 <div class="excursions__field">
                     <label class="excursions__field-name">
-                        Dziecko: <strong><span>${excursionChildPrice}</span></strong>PLN
+                        Child: <strong><span>${excursionChildPrice}</span></strong>PLN
                     </label>
                 </div>
                 <div class="excursions__field excursions__field--submit">
-                    <input class="excursions__field-input excursions__field-input--update" value="edytuj"
+                    <input class="excursions__field-input excursions__field-input--update" value="edit"
                         type="submit" />
-                    <input class="excursions__field-input excursions__field-input--remove" value="usuń"
+                    <input class="excursions__field-input excursions__field-input--remove" value="remove"
                     type="submit"/>
                 </div>
             </form>
@@ -81,18 +81,18 @@ export function clientLiElement(insertToElement, id, excursionName, excursionDes
         <form class="excursions__form">
             <div class="excursions__field">
                 <label class="excursions__field-name">
-                    Dorosły: ${excursionAdultPrice} <input class="excursions__field-input" name="adults" />
+                    Adult: ${excursionAdultPrice} <input class="excursions__field-input" name="adults" />
                 </label>
             </div>
             <div class="excursions__field">
                 <label class="excursions__field-name">
-                    Dziecko: ${excursionChildPrice} <input class="excursions__field-input" name="children" />
+                    Child: ${excursionChildPrice} <input class="excursions__field-input" name="children" />
                 </label>
             </div>
             <div class="excursions__field excursions__field--submit">
                 <input
                     class="excursions__field-inpuexcursions__field-input--submit"
-                    value="dodaj do zamówinia"
+                    value="Add order"
                     type="submit"
                 />
             </div>
@@ -109,9 +109,9 @@ export function clientLiOrder(insertToElement, excursionName, excursionAdultNumb
             <h3 class="summary__title">
                 <span class="summary__name">${excursionName}</span>
                 <strong class="summary__total-price">${totalPrice}PLN</strong>
-                <a href="" class="summary__btn-remove" title="usuń">X</a>
+                <a href="" class="summary__btn-remove" title="remove">X</a>
             </h3>
-            <p class="summary__prices">dorośli: ${excursionAdultNumber} x ${excursionAdultPrice}PLN, dzieci: ${excursionChildNumber} x ${excursionChildPrice}PLN</p>
+            <p class="summary__prices">Adults: ${excursionAdultNumber} x ${excursionAdultPrice}PLN, Children: ${excursionChildNumber} x ${excursionChildPrice}PLN</p>
         </li>`
     return insertToElement.insertAdjacentHTML('beforeend', elementHtml);
 };

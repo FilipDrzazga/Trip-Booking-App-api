@@ -71,7 +71,7 @@ function updateExcursion() {
                     };
                     api.updateApi(id, data, displayExcursion);
                 } else {
-                    e.target.value = 'zapisz';
+                    e.target.value = 'save';
                     spanArray.forEach(el => el.contentEditable = true);
                 };
             };
