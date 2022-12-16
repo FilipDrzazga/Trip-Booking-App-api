@@ -10,7 +10,7 @@ Users should be able to:
 - Client panel should have following functionalities:
    - client can chose a trip by adding amount tickets in correct form field and adding it to basket,
    - trip is added to the basket (API basket) and displayed to UI,
-   - the total for the basket is updated every time a trip is added or removed, - client can order trips by filling form field with his/her name, surname and e-mail        address and by clicking button "add to order", - order with details is added to API (orders), - all data needs to be validated before sending.
+   - the total for the basket is updated every time a trip is added or removed, - client can order trips by filling form field with his/her name, surname and e-mail        address and by clicking button "Buy", - order with details is added to API (orders), - all data needs to be validated before sending.
 - Admin panel should have following functionalities:
    - adding, removing or editing trip from admin panel.
 
