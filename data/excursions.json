@@ -1,4 +1,92 @@
 {
-  "excursions": [],
-  "orders": []
+  "excursions": [
+    {
+      "excursionName": "Kruszwica",
+      "excursionDescription": "Jezioro Gopło i okolice",
+      "excursionAdultPrice": "30",
+      "excursionChildPrice": "15",
+      "id": 1
+    },
+    {
+      "excursionName": "Poznan",
+      "excursionDescription": "Koziołki i stary rynek",
+      "excursionAdultPrice": "100",
+      "excursionChildPrice": "20",
+      "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "name": "Filip ",
+      "email": "filip.drzazga@gmail.com",
+      "totalPrice": "90PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 2 x 30PLN, dzieci: 2 x 15PLN"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Filip",
+      "email": "filip.drzazga@gmail.com",
+      "totalPrice": "225PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 5 x 30PLN, dzieci: 5 x 15PLN"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Filip",
+      "email": "filip.drzazga@gmail.com",
+      "totalPrice": "135PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 3 x 30PLN, dzieci: 3 x 15PLN"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "ffff",
+      "email": "filip.drzaazga@gmail.com",
+      "totalPrice": "90PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 2 x 30PLN, dzieci: 2 x 15PLN"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Filip",
+      "email": "filip.drzazga@gmail.com",
+      "totalPrice": "90PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 2 x 30PLN, dzieci: 2 x 15PLN"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "filip",
+      "email": "filip.drzazga@gmail.com",
+      "totalPrice": "90PLN",
+      "excursions": [
+        {
+          "excursionName": "Kruszwica",
+          "excursionInfo": "dorośli: 2 x 30PLN, dzieci: 2 x 15PLN"
+        }
+      ],
+      "id": 6
+    }
+  ]
 }

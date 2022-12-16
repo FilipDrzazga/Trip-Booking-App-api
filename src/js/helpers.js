@@ -1,5 +1,5 @@
 export function isFormValid(form, checkInputs) {
-    let isValid = false;
+    let isValid = true;
     checkInputs.forEach(el => {
         const { name, isReq, pattern,type } = el;
         const input = form.elements[name];
@@ -26,7 +26,6 @@ export function isFormValid(form, checkInputs) {
                 };
             };
         }
-        isValid = true;
     });
     return isValid;
 };

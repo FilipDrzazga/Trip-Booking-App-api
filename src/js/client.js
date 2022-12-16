@@ -66,6 +66,8 @@ function removeExcursion() {
 function submitOrder(){
     const form = document.querySelector('.order');
     const basket = document.querySelector('.summary');
+    const orderSummary = document.querySelector('.order__total-price-value');
+    console.log(orderSummary);
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const summaryItem = [...document.querySelectorAll('.summary__item')];
@@ -78,6 +80,7 @@ function submitOrder(){
             };
             api.addClientOrderApi(data, alert('Order complete, Thank you!'));
             basket.innerHTML = '';
+            orderSummary.textContent = '';
             form.reset();
         };
     });
